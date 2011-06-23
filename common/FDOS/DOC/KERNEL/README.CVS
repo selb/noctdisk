@@ -1,0 +1,33 @@
+You can check out the latest code using CVS as follows:
+
+cvs -z3 -d:pserver:anonymous@freedos.cvs.sourceforge.net:/cvsroot/freedos login
+Password: Press the Enter key.
+
+Then, to get the kernel code:
+cvs -z3 -d:pserver:anonymous@freedos.cvs.sourceforge.net:/cvsroot/freedos checkout kernel
+
+WARNING: Unix / Linux cvs clients often download text files with Unix
+linebreaks. DOS compilers and command.com will not be happy about this.
+Windows clients already convert to DOS linebreaks automatically. Unix
+users should do the following after download to force DOS linebreaks:
+
+for x in $(find kernel/ -type f) ; do touch -r $x foo
+  recode -s /../CRLF $x ; touch -r foo $x ; done
+
+Do not forget to convert back (... recode -s /CRLF../ ...) before
+you UPLOAD changed files to CVS again, otherwise Windows clients
+would (as they assume CVS contents to use Unix linebreaks) convert
+files to CRCRLF nonsense linebreak style when they download them.
+
+You can also use the fancy CVS viewer interface at
+
+	http://freedos.cvs.sourceforge.net/freedos
+
+to read the sources, compare versions, and download files.
+One of the advantages of using a real cvs client instead
+is that you can download all files simultaneously...
+
+More instructions for CVS usage can be found on
+
+	http://sourceforge.net/cvs/?group_id=5109
+

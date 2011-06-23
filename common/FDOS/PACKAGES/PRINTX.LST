@@ -1,0 +1,11 @@
+appinfo/
+appinfo/print.lsm
+bin/
+bin/print.com
+doc/
+doc/print/
+doc/print/readme
+help/
+help/print.en
+packages/
+packages/printx/

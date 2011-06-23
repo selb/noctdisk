@@ -1,0 +1,9 @@
+appinfo/
+appinfo/comp.lsm
+bin/
+bin/comp.com
+doc/
+doc/comp/
+doc/comp/comp.doc
+packages/
+packages/compx/

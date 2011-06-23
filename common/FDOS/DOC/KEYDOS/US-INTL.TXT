@@ -1,0 +1,215 @@
+The US keyboard - international layout
+======================================
+
+Unlike the US keyboard in itself or several other real, physical keyboards
+for other languages, the "US-International" layout is actually a  software
+solution over a physical keyboard. There are different approaches based on
+Windows and IBM OS/2, for example. Here I'm providing the US-International
+layout as based on Windows; some extra combinations are available based on
+IBM OS/2 (where they don't conflict with Windows).
+
+Linedraw, block and shade characters as well as the soft  hyphen  and  the
+non-breaking space characters are not available.
+
+Below is the drawing of the enhanced alphanumeric block.
+
+                 +-----------------------------------+
+                 | <Shift>     <Shift> + <Right_Alt> |
+                 | <Normal>    <Right_Alt>           |
+                 +-----------------------------------+
+
+When used with codepage 858 (default):
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | ! ˚ | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | + ˆ |
+|` Ó| 1 ≠ | 2 ˝ | 3 ¸ | 4 œ | 5 ’ | 6 ¨ | 7 ´ | 8 Û | 9 | 0 | - æ | = û |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q é | W è | E ê | R   | T Ë | Y ö | U È | I ÷ |O ‡|P ô| {   | }   |
+      | q Ñ | w Ü | e Ç | r © | t Á | y Å | u £ | i ° |o ¢|p î| [ Æ | ] Ø |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A µ | S ı | D — | F   | G   | H   | J   | K   |L ù|: ¯| " ˘ | | › |
+        | a † | s · | d – | f ü | g   | h   | j   | k   |l õ|; Ù| ' Ô | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z í | X   | C Ω | V   | B   | N • | M   | < Ä |>  | ?   |
+          | z ë | x   | c ∏ | v   | b   | n § | m Ê | , á |. ˙| / ® |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, I, O, U>
+    <~> for <A, N, O>
+    <^> for <A, E, I, O, U>
+    <'> for <A, E, I, O, U, Y>
+    <"> for <A, E, I, O, U, y> (Y with diaresis not available on cp858)
+
+To echo the apostrophe and the quotation mark, "combine" them with <Space>.
+
+When used with codepage 850, the Euro sign is not available.
+All the rest is the same.
+
+When used with codepage 437:
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | !   | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | + ˆ |
+|`  | 1 ≠ | 2 ˝ | 3   | 4   | 5   | 6 ¨ | 7 ´ | 8   | 9 | 0 | - æ | =   |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q é | W è | E ê | R   | T   | Y ö | U   | I   |O  |P ô| {   | }   |
+      | q Ñ | w Ü | e Ç | r   |     | y Å | u £ | i ° |o ¢|p î| [ Æ | ] Ø |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A   | S ı | D   | F   | G   | H   | J   | K   |L  |: ¯| "   | |   |
+        | a † | s · | d   | f ü | g   | h   | j   | k   |l  |; Ù| '   | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z í | X   | C Ω | V   | B   | N • | M   | < Ä |>  | ?   |
+          | z ë | x   | c   | v   | b   | n § | m Ê | , á |. ˙| / ® |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+Some capital accented letters are not available as well as other characters.
+
+
+
+Variations
+==========
+
+* Official languages on Oceania
+  French, Fijian, Marshallese, Kiribati, Chuuk, Kosraean, Ponapean, Ulithian,
+  Yapese, Nauruan, Palauan,  Sonsoralese,  Tobian,  Angaur,  Samoan,  Tongan,
+  Tuvaluan and Bislama
+
+  Codepage 30021
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | ! ˚ | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | + ˆ |
+|` Ó| 1   | 2 ˝ | 3 ¸ | 4 œ | 5 ’ | 6   | 7   | 8   | 9 | 0 | - æ | = û |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q   | W   | E ê | R   | T   | Y   | U   | I   |O ¨|P  | {   | }   |
+      | q   | w   | e Ç | r © | t   | y   | u   | i   |o ´|p  | [ Æ | ] Ø |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A í | S ı | D   | F   | G   | H   | J   | K   |L  |: ¯| " ˘ | | › |
+        | a ë | s   | d   | f ü | g   | h   | j   | k   |l  |; Ù| ' Ô | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z   | X   | C Ω | V   | B   | N • | M   | < Ä |>  | ?   |
+          | z   | x   | c ∏ | v   | b   | n § | m Ê | , á |.  | /   |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, U>
+    <~> for <A, N, O, U>
+    <^> for <A, E, I, O, U>
+    <"> for <E, I, U, Y>
+    Macron: <[> for <A, E, I, N, O, U>
+    Cedilla: <]> for <C, L, M, N, O>
+
+* Official and co-official languages on Southern Africa
+  Afrikaans, Fanagalo, Khoe, Lobedu, Nama, Ndebele (Northern/Southern), 
+  Pluthi, San, Sotho (Northern/Southern), Swati, Tsonga, Tswana, Venda,
+  Xhosa, Zulu, Chichewa, French, Malagasy, Portuguese, Shikomor, Nyanja
+  and French Patois.
+  Widely spoken: German.
+
+  Codepage: 30023
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | ! ˚ | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | + ˆ |
+|` Ó| 1   | 2 ˝ | 3 ¸ | 4 œ | 5 ’ | 6   | 7   | 8   | 9 | 0 | -   | =   |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q   | W   | E   | R   | T   | Y   | U   | I   |O ¨|P  | {   | }   |
+      | q   | w   | e   | r   | t   | y   | u   | i   |o ´|p  | [ ¶ | ] ß |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A í | S ı | D   | F   | G   | H   | J   | K   |L  |: ¯| "   | |   |
+        | a ë | s · | d   | f   | g   | h   | j Ú | k   |l  |; Ù| '   | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z   | X   | C   | V   | B   | N æ | M   | <   |>  | ?   |
+          | z   | x   | c   | v   | b   | n Ω | m Ê | , Æ |. Ø| /   |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, I, O, U>
+    <~> for <A, N, O>
+    Acute/Cedilla: <'> for <A, E, I, O, U, C>
+    <"> for <A, E, I, O, U, Y, N>
+    Circumflex (above/below)/Caron: <^> for <A, E, I, O, U, W, S, D, L, N, T>
+
+* Official languages on Northern and Eastern Africa
+  French, Fula, Soninke, Wolof, Kirundi, Swahili,  Kinyarwanda,  Somali
+  and French Patois.
+  Widely spoken: Spanish, Italian, Dinka, Nuer, Afar, Oromo and Luganda.
+
+  Codepage: 30024
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | !   | @   | #   | $   | %   | ^   | &   | *   | ( | ) | _   | +   |
+|`  | 1 ≠ | 2   | 3   | 4   | 5 ’ | 6   | 7   | 8   | 9 | 0 | -   | =   |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q   | W   | E ˚ | R   | T   | Y Ì | U   | I   |O ¨|P  | è { | ù } |
+      | q   | w   | e ˙ | r   | t   | y Ï | u   | i   |o ´|p  | Ü [ | õ ] |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A í | S ı | D — | F   | G ∏ | H   | J æ | K   |L  |: ¯| "   | |   |
+        | a ë | s   | d – | f   | g © | h   | j Ω | k   |l  |;  | '   | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z   | X   | C   | V   | B Ë | N ß | M   | <   |>  | ?   |
+          | z   | x   | c   | v   | b Á | n ¶ | m Ê | , Æ |. Ø| / ® |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, I, O, U>
+    <~> for <A, N>
+    <^> for <A, E, I, O, U>
+    Acute/Cedilla: <'> for <A, E, I, O, U, C>
+    <"> for <A, E, è, I, O, ù, U, Y>
+    Macron below: <™> for <A, I, O, ù>
+
+* Official languages on Western Africa
+  French, Portuguese, Wolof, Mandinka, Fula, Dagbani, Gonja, Ga,  Dangbe,
+  Dagaari, Kasem, Nzema, Ewe, Twi, Badiu, Maio, Fogo, Brava, S∆o Nicolau,
+  Criol d'Soncente, Sal, Boavista and Santo Ant∆o.
+  Widely spoken: Dioula, Moore, Bambara, Zarma, Krio and Kanuri.
+
+  Codepage: 30025
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | !   | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | +   |
+|`  | 1   | 2   | 3   | 4 œ | 5 ’ | 6   | 7   | 8   | 9 | 0 | -   | =   |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q   | W ô | E è | R Ê | T   | Y Ì | U Ó | I é |O ¨|P ù| {   | }   |
+      | q   | w î | e Ü | r ú | t   | y Ï | u · | i Ñ |o ´|p õ| [ ¶ | ] ß |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A í | S ı | D — | F û | G ∏ | H æ | J Ô | K   |L  |: ¯| "   | |   |
+        | a ë | s   | d – | f ü | g © | h Ω | j ˜ | k   |l  |;  | '   | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z   | X   | C ˚ | V › | B Ë | N ≠ | M   | <   |>  | ?   |
+          | z   | x   | c ˙ | v ˘ | b Á | n ® | m Ê | , Æ |. Ø| /   |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, I, O, U>
+    <~> for <A, E, I, O, U, N>
+    <^> for <A, E, I, O, U>
+    Acute/Cedilla: <'> for <A, E, I, O, U, C>
+    <"> for <E, I, U, Y>
+
+* Official languages on Central Africa
+  French, Portuguese, Spanish, Swahili, Lingala, Sango, Tshiluba, Kikongo,
+  Forro, Angolar and Principense.
+
+  Codepage: 30026
+
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+|~  | !   | @   | #   | $ ú | %   | ^   | &   | *   | ( | ) | _   | +   |
+|` Ó| 1 ≠ | 2   | 3   | 4 œ | 5 ’ | 6   | 7   | 8   | 9 | 0 | -   | =   |
++---+-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+      | Q   | W   | E   | R   | T   | Y   | U   | I   |O ¨|P  | ü { | ù } |
+      | q ¶ | w   | e   | r   | t   | y   | u   | i   |o ´|p ß| û [ | õ ] |
+      +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-------+
+        | A í | S ı | D   | F   | G   | H   | J   | K   |L  |: ¯| "   | |   |
+        | a ë | s   | d   | f   | g   | h   | j   | k   |l  |;  | '   | \ ™ |
+        +-----+-----+-----+-----+-----+-----+-----+-----+---+---+-----+-----+
+          | Z   | X   | C   | V   | B   | N   | M   | <   |>  | ?   |
+          | z   | x   | c   | v   | b   | n   | m Ê | , Æ |. Ø| / ® |
+          +-----+-----+-----+-----+-----+-----+-----+-----+---+-----+
+
+    Deadkeys:
+    <`> for <A, E, U>
+    <~> for <A, N, O>
+    <^> for <A, E, I, O, U, ü, ù>
+    Acute/Cedilla: <'> for <A, E, I, O, U, ü, ù, C>
+    <"> for <A, E, I, O, U, Y>
+    Caron: <Ó> for <A, E, I, O, ü, ù>

@@ -1,0 +1,293 @@
+This is a sample configuration for FreeDOS. You can find FreeDOS at
+http://www.freedos.org/ - it is open source and freeware.
+
+A "beta 9" pre-release is out since mid 2003. 
+If you have beta 8, you can use the beta 9 files to update all "base" 
+packages in one go. This sample config makes use of new kernel features like ECHO. 
+As of 10 October 2003, current versions on http://freedos.sourceforge.net/ are:
+FreeCOM 0.82pl3 XMS swap and kernel 2032a FAT32 (with new SYS!).
+You can now boot from anywhere (even beyond 8 GB) and no refreshing
+of the boot sector is needed after resize / Ghost / PQ DriveImage...
+
+We call FreeDOS "beta" because we want to provide almost everything
+that MS DOS 5.0 has before calling FreeDOS "1.0"... However, we already
+do have FAT32 support (MS DOS did not have this even in Win95a) and
+some other goodies that you may remember from MS DOS 6.22 ... :-).
+
+If you have questions about this sample configuration, mail me:
+eric foobar coli.uni lalala sb.de
+(replace " foobar " by @ and " lalala " by - to get my real adress)
+
+Provided below are versions for 
+*the global system configuration file called config.sys 
+ (or fdconfig.sys if you want, which prevents other 
+ DOS from executing the FreeDOS specific system configuration)
+*The system automation file Autoexec.bat
+ you may use another name like FDAUTO.BAT, to prevent other
+ DOS from executing your FreeDOS specific commands.
+ be sure to mention it in config.sys then:
+ SHELL=C:\COMMAND.COM /P=C:\FDAUTO.BAT
+
+we provide both a multi-menu version and a simple version of both files.
+
+
+******* fdconfig.sys or config.sys follows *******
+
+rem FreeDOS opens fdconfig.sys if it exists. If not, it uses config.sys
+
+files=50
+break=on
+
+rem this could cause problems but normally does not
+stacks=0,0
+
+rem needed for CD-ROM and RAMDISK - default is E: otherwise
+lastdrive=Z
+
+rem buffers will be auto-tuned anyway, but this is still not wrong to say:
+buffers=20,0
+
+rem will only trigger when UMB and/or HMA become active, so you can leave
+rem it there all the time:
+DOS=HIGH,UMB
+
+rem internally, FreeDOS is most compatible to MS DOS 5.0
+rem to override the DOS version for a single command invocation,
+rem you can use CALLVER. There is no memory-wasting SETVER TSR in FreeDOS.
+VERSION=6.20
+
+rem I assume that all files are in c:\fdos\bin.
+rem I assume that you have renamed all DR DOS stuff to be called DR*.*
+
+rem First, try which of those XMS/HMA drivers works best. The "?"
+rem makes DOS ask you whether it should load the driver.
+ECHO Select Y for at most one of the next 4 drivers.
+ECHO FDXMS286 is for 286 (max 16 MB), FDXXMS allows more than 64 MB.
+DEVICE?=C:\fdos\bin\FDXXMS.SYS BIOS NUMHANDLES=64
+DEVICE?=C:\fdos\bin\HIMEM.EXE
+DEVICE?=C:\fdos\bin\FDXMS.SYS
+DEVICE?=C:\fdos\bin\FDXMS286.SYS
+rem DREMM386 has builtin himem... DEVICE?=C:\fdos\bin\DRHIMEM.EXE
+
+rem UMBPCI can be found on http://www.uwe-sieber.de/ and enables
+rem hardware UMB, which is faster than using any EMM386.
+rem version 3.51 also works with almost all systems,
+rem except Vmware if using any AMD processor.
+
+rem DREMM386 needs a 203x kernel: 64k RAM for init are not enough.
+ECHO Select at most one of the next 3 EMS/UMB drivers - UMBPCI is
+ECHO fastest but w/o UMB. WARNING: FD EMM386 is FD*XMS* incompatible.
+DEVICE?=C:\fdos\bin\UMBPCI.SYS
+DEVICE?=C:\fdos\bin\EMM386.EXE
+DEVICE?=C:\fdos\bin\DREMM386.EXE
+
+rem If your CD-ROM drive did not come with a DOS driver, you have to
+rem use one of the free generic CD-ROM drivers out there or the
+rem experimental FreeDOS ATAPICDD.SYS
+ECHO Select Y now if you want CD-ROM support
+DEVICEHIGH?=C:\fdos\bin\ATAPICDD.SYS /D:CDROM001
+rem there are stable dos drivers, like vide-cdd.sys and mtmcdai.sys
+rem look at page: http://www.opus.co.tt/dave/utils.htm
+
+rem this is a new invention - October 2003... the 12 means 12/4=3 MB
+rem CDRom read caching, 1 CACHE per loaded cdrom-driveR
+rem (a single driver can handle multiple drives, by the way)
+ECHO Select Y now if you want a CD-ROM cache:
+DEVICEHIGH?=C:\fdos\bin\CDRcache.SYS CDROM001 CDRCACH$ 12
+
+rem XMSDSK can be found online in FURD19_u.zip together with EMSDSK
+rem and is freeware. TDSK versions: open source 2.3, freeware 2.4...
+ECHO Select which of the following two RAMDISKs you want - if any
+DEVICEHIGH=C:\fdos\bin\XMSDSK.EXE 2048
+DEVICEHIGH?=C:\fdos\bin\tdsk.exe 2048 512 144 1
+
+rem install this to cache drive C only (can cache others, but for testing...)
+rem actually, C means "everything on the first harddisk" to LBAcache.
+rem give the FLOP option to LBAcache to enable floppy caching as well.
+rem ... the BUF 12 option sets the cache size to 12/4=3 MB.
+ECHO Please say N and do not load the cache now if you loaded DREMM386.
+DEVICEHIGH?=c:\fdos\bin\lbacache.sys buf 12 drv c
+
+rem NANSI even makes screen output faster and allows extra functions.
+rem the /S option disables potentially dangerous keyboard macros.
+rem NANSI should be loaded after the HMA driver - CON may not move.
+DEVICEHIGH?=c:\fdos\bin\NANSI.SYS /S
+rem EECHO replaces the $ sign by the ESCAPE char - since kernel 2030.
+rem see the NANSI documentation for a list of possible escape strings.
+EECHO $[0;1;33;44m I hope this activated colors :-)
+
+rem This driver gives you a MORE$ device. Now you can use
+rem "tree &gt; more$ " instead of "tree | more"... If Ctrl-Break or
+rem Ctrl-C crashes when using MORE$, update your kernel to 2032a.
+rem MORESYS should be loaded after the HMA driver - CON may not move.
+rem I wrote &gt; for the "greater" sign, because I am not sure if it
+rem would be okay to use that sign in comments...
+DEVICEHIGH=c:\fdos\bin\MORESYS.SYS
+
+ECHO If you want to activate DR emm386 DPMI now, you must not have
+ECHO activated any other emm386 above and better no HIMEM either.
+DEVICE?=c:\bin\dremm386.exe DPMI=ON DMA=256 MULTITASKING=ON EXCLUDE=C000-C7FF EXCLUDE=F000-FFFF INT15=16384 VERBOSE
+
+rem make sure that this is indeed the path to command.com before running this!
+rem note how the special /p option syntax is used to select fdauto.bat
+rem instead of autoexec.bat - this is useful if you dual-boot FreeDOS and
+rem MS DOS / Windows and both share the C: drive (e.g. use MetaKern boot menu)
+SHELL=c:\fdos\bin\command.com c:\fdos\bin /e:512 /p=fdauto.bat
+
+******* fdauto.bat (autoexec.bat) follows *******
+
+@echo off
+prompt $p$g
+rem you can also have a path like: C:\FREEDOS\BIN;C:\BIN;C:\BAT;.......:
+path C:\FDOS\BIN;C:\BATCHES
+set HELPPATH=C:\FDOS\HELP
+set LANG=US
+set NLSPATH=C:\FDOS\NLS
+
+rem if you want to use non-US keyboards (e.g. German keyboard layout),
+rem you can use MKEYB (small but flexible), KBD-EA2 (only for German) or
+rem KEYB (bigger but with macro functionality), ... - some of those are
+rem even available as .SYS drivers for early loading and even smaller
+rem memory footprint. MKEYB/KBD-EA2 are less than 1 kilobyte in RAM.
+rem KBD-EA2 also works around a bug in EDIT which affects AltGr usage.
+
+rem PERUSE is a TSR program to display files, so probably
+rem the term "scrolling driver" is a bit misleading. It is
+rem freeware, you can download a copy from my site.
+c:\fdos\bin\choice /c:yn Load PERUSE scrolling driver?
+IF errorlevel 2 GOTO noperuse
+lh c:\bin\peruse.exe
+echo PERUSE loaded
+:noperuse
+
+c:\fdos\bin\choice /c:yn Load MOUSE driver?
+IF errorlevel 2 GOTO nomouse
+lh c:\fdos\bin\ctmouse.exe /3 /V
+rem /3 for 3-button and /V for serial-before-ps2 search order
+echo CuteMouse driver loaded
+rem CuteMouse includes the EGA.SYS functionality as a bonus...
+:nomouse
+
+rem this will fail automatically if no CDROM driver is loaded :-)
+if not exist CDRCACH$ goto normalcd
+echo Activating cached CD-ROM drive now.
+lh c:\fdos\bin\shsucdx.exe /D:CDRCACH$,N
+goto nomorecd
+:normalcd
+if not exist CDROM001 goto nomorecd
+echo Activating uncached CD-ROM drive now.
+lh c:\fdos\bin\shsucdx.exe /D:CDROM001,N
+:nomorecd
+
+
+c:\fdos\bin\choice /c:yn Load SHARE driver?
+IF errorlevel 2 GOTO noshare
+LH c:\fdos\bin\share.exe /L:20 /F:2048
+echo SHARE.exe driver loaded
+rem Yes, FreeDOS does have a SHARE driver. If you have problems with
+rem it, mail me. In Linux xdosemu DOS boxes and in network context,
+rem FreeDOS may cause problems with Clipper file locking, though.
+:noshare
+
+echo Welcome at FreeDOS. Press enter to go on and see environment:
+rem another pause-like command is set /p variable=prompt which sets
+rem an environment variable to a value provided by the user.
+pause
+set
+
+echo FreeDOS is now at your service :-)
+
+
+******* THIS WAS THE MULTIPLE CHOICE VERSION *******
+******* AUTOMATIC ONE-CHOICE VERSION FOLLOWS *******
+
+
+******* fdconfig.sys or config.sys follows *******
+
+rem You could use MENUCOLOR here for a full screen menu but
+rem I prefer a smaller menu. See kernel package config.txt...
+
+MENU 1 Load FreeDOS with UMBPCI, caches and CD-ROM support
+MENU 2 Load FreeDOS with DR DOS EMS driver only
+MENU 3 Load no extra drivers at all
+
+!files=50
+!break=on
+!stacks=0,0
+
+lastdrive=Z
+buffers=20,0
+DOS=HIGH,UMB
+VERSION=6.20
+
+1?DEVICE=C:\fdos\bin\FDXXMS.SYS BIOS NUMHANDLES=64
+1?DEVICE=C:\fdos\bin\UMBPCI.SYS
+2?DEVICE=C:\fdos\bin\DREMM386.EXE
+
+1?DEVICEHIGH=C:\fdos\bin\ATAPICDD.SYS /D:CDROM001
+1?DEVICEHIGH=C:\fdos\bin\CDRcache.SYS CDROM001 CDRCACH$ 12
+
+rem 1?ECHO Enter Y to load an XMSDSK ramdisk:
+rem 1?DEVICEHIGH?=C:\fdos\bin\XMSDSK.EXE 2048
+
+1?DEVICEHIGH=C:\fdos\bin\LBAcache.sys buf 12 drv c
+
+rem the 12? means that NANSI is loaded for both menu options 1 and 2.
+12?DEVICEHIGH=X:\fdos\bin\NANSI.SYS /S
+12?EECHO $[0;1;33;44m I hope this activated colors :-)
+
+1?DEVICEHIGH=X:\fdos\bin\MORESYS.SYS
+
+3?ECHO Booting FreeDOS without any drivers - consider at least HIMEM
+3?ECHO because it allows FreeDOS kernel and shell mostly in HMA/XMS.
+
+rem No need to use 1?shell=... 2?shell=... as fdauto.bat can
+rem know which menu option is selected by reading %config%.
+rem The ! means that even F5 does not skip it (I think...).
+!SHELL=C:\fdos\bin\command.com c:\fdos\bin /e:512 /p=fdauto.bat
+
+******* fdauto.bat (autoexec.bat) follows *******
+
+@echo off
+prompt $p$g
+path C:\FDOS\BIN;C:\BATCHES
+set HELPPATH=C:\FDOS\HELP
+set LANG=US
+set NLSPATH=C:\FDOS\NLS
+
+IF not "%CONFIG%"=="1" goto noperuse
+echo Load PERUSE scrolling driver?
+? lh c:\bin\peruse.exe
+echo PERUSE loaded
+:noperuse
+
+IF "%CONFIG%"=="3" goto nomouse
+lh c:\fdos\bin\ctmouse.exe /3 /V
+:nomouse
+
+if not exist CDRCACH$ goto normalcd
+echo Activating cached CD-ROM drive now.
+lh c:\fdos\bin\shsucdx.exe /D:CDRCACH$,N
+goto nomorecd
+rem the above goto avoids double SHSUCDX loading.
+:normalcd
+if not exist CDROM001 goto nomorecd
+echo Activating uncached CD-ROM drive now.
+lh c:\fdos\bin\shsucdx.exe /D:CDROM001,N
+:nomorecd
+
+IF "%CONFIG%"=="3" goto noshare
+LH c:\fdos\bin\share.exe /L:20 /F:2048
+:noshare
+
+IF "%CONFIG%"=="3" echo The environment contents are:
+rem echo. displays an empty line...
+IF "%CONFIG%"=="3" echo.
+IF "%CONFIG%"=="3" goto nopause
+echo Welcome at FreeDOS. Press enter to go on and see environment:
+pause
+:nopause
+set
+
+echo FreeDOS is now at your service :-)
+

@@ -1,0 +1,13 @@
+appinfo/
+appinfo/deltree.lsm
+bin/
+bin/deltree.com
+doc/
+doc/deltree/
+doc/deltree/deltree.txt
+doc/deltree/file_id.diz
+help/
+help/deltree.en
+nls/
+packages/
+packages/deltreex/

@@ -1,0 +1,16 @@
+appinfo/
+appinfo/undelete.lsm
+bin/
+bin/undel086.exe
+bin/undelete.com
+doc/
+doc/undelete/
+doc/undelete/copying.txt
+doc/undelete/disclaim.txt
+doc/undelete/howto1.txt
+doc/undelete/notes.txt
+doc/undelete/relnotes.txt
+help/
+help/undelete.en
+packages/
+packages/undelx/

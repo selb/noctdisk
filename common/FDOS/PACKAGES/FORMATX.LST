@@ -1,0 +1,15 @@
+appinfo/
+appinfo/format.lsm
+bin/
+bin/format.exe
+doc/
+doc/format/
+doc/format/bugs.txt
+doc/format/contrib.txt
+doc/format/help.txt
+doc/format/install.txt
+doc/format/news.txt
+doc/format/readme.txt
+doc/format/todo.txt
+packages/
+packages/formatx/

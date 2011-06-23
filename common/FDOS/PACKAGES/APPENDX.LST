@@ -1,0 +1,11 @@
+appinfo/
+appinfo/append.lsm
+bin/
+bin/append.exe
+doc/
+doc/append/
+doc/append/readme.txt
+help/
+help/append.en
+packages/
+packages/appendx/

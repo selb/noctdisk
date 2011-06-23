@@ -1,0 +1,12 @@
+appinfo/
+appinfo/exe2bin.lsm
+bin/
+bin/exe2bin.com
+doc/
+doc/exe2bin/
+doc/exe2bin/exe2bin.txt
+doc/exe2bin/license.txt
+help/
+help/exe2bin.en
+packages/
+packages/exe2binx/

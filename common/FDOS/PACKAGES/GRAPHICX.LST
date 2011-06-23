@@ -1,0 +1,15 @@
+appinfo/
+appinfo/graphics.lsm
+bin/
+bin/graph-hp.com
+bin/graph-ps.com
+bin/graphics.bat
+bin/graphpin.com
+doc/
+doc/graphics/
+doc/graphics/epson.png
+doc/graphics/graphics.txt
+help/
+help/graphics.en
+packages/
+packages/graphicx/

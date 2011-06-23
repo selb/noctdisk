@@ -1,0 +1,11 @@
+Displays the amount of used and free memory in your system.
+
+Syntax: MEM [/E] [/F] [/D] [/U] [/X] [/C] [/P] [/?]
+  /E  Reports all information about Expanded Memory
+  /F  Full list of memory blocks
+  /D  List of device drivers currently in memory
+  /U  List of programs in conventional and upper memory
+  /X  Reports all information about Extended Memory
+  /C  Lists conventional and upper memory use per module
+  /P  Pauses after each screenful of information
+  /?  Displays this help message

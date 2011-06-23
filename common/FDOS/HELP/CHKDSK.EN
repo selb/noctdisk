@@ -1,0 +1,13 @@
+ChkDsk beta 0.31
+Copyright 2002, 2003 Imre Leber under the GNU GPL
+
+Checks a volume and returns a status report
+Usage:
+	Chkdsk [<volume>] [/f] [/d <files>] [/r] [/s]
+
+/f: attempt to fix any errors found.
+/d: print out the indicated files and show the fragmentation factor.
+/r: scan the data area and try to recover unreadable data.
+/s: only show drive summary.
+
+Note: if volume is ommited, the current drive is assumed.

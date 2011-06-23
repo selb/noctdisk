@@ -1,0 +1,11 @@
+appinfo/
+appinfo/chkdsk.lsm
+bin/
+bin/chkdsk.exe
+doc/
+doc/chkdsk/
+doc/chkdsk/chkdsk
+help/
+help/chkdsk.en
+packages/
+packages/chkdskx/

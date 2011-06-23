@@ -1,0 +1,9 @@
+appinfo/
+appinfo/nansi.lsm
+bin/
+bin/nansi.sys
+doc/
+doc/nansi/
+doc/nansi/nansi.doc
+packages/
+packages/nansix/

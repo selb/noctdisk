@@ -1,0 +1,13 @@
+appinfo/
+appinfo/replace.lsm
+bin/
+bin/replace.exe
+doc/
+doc/replace/
+doc/replace/history.txt
+doc/replace/license.txt
+doc/replace/readme.txt
+help/
+help/replace.en
+packages/
+packages/replacex/

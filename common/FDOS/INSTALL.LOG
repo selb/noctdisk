@@ -1,0 +1,417 @@
+<install ver="3.7.6pl1" logformat="1.0" >
+<source path="X:\FREEDOS\PACKAGES" />
+<dest path="C:\FDOS" />
+
+<diskset name="base" >
+<datfile name="X:\FREEDOS\PACKAGES\base.1" >
+<disk name="base" number="1" >
+<package name="base\appendx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\appendx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\appendx.LST"/>
+<package size="19484"/>
+<disk free="133750784"/>
+/>
+<package name="base\assignx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\assignx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\assignx.LST"/>
+<package size="19483"/>
+<disk free="133709824"/>
+/>
+<package name="base\attribx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\attribx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\attribx.LST"/>
+<package size="13754"/>
+<disk free="133672960"/>
+/>
+<package name="base\bootfixx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\bootfixx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\bootfixx.LST"/>
+<package size="9499"/>
+<disk free="133646336"/>
+/>
+<package name="base\callverx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\callverx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\callverx.LST"/>
+<package size="1012"/>
+<disk free="133623808"/>
+/>
+<package name="base\cdrcachx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\cdrcachx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\cdrcachx.LST"/>
+<package size="14290"/>
+<disk free="133617664"/>
+/>
+<package name="base\chkdskx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\chkdskx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\chkdskx.LST"/>
+<package size="41375"/>
+<disk free="133588992"/>
+/>
+<package name="base\choicex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\choicex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\choicex.LST"/>
+<package size="20716"/>
+<disk free="133535744"/>
+/>
+<package name="base\commandx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\commandx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\commandx.LST"/>
+<package size="1188122"/>
+<disk free="133478400"/>
+/>
+<package name="base\compx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\compx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\compx.LST"/>
+<package size="3216"/>
+<disk free="132251648"/>
+/>
+<package name="base\cpix" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\cpix.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\cpix.LST"/>
+<package size="126917"/>
+<disk free="132239360"/>
+/>
+<package name="base\ctmousex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\ctmousex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\ctmousex.LST"/>
+<package size="183221"/>
+<disk free="132089856"/>
+/>
+<package name="base\cwsdpmix" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\cwsdpmix.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\cwsdpmix.LST"/>
+<package size="48917"/>
+<disk free="131878912"/>
+/>
+<package name="base\debugx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\debugx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\debugx.LST"/>
+<package size="44711"/>
+<disk free="131815424"/>
+/>
+<package name="base\defragx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\defragx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\defragx.LST"/>
+<package size="53173"/>
+<disk free="131758080"/>
+/>
+<package name="base\deltreex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\deltreex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\deltreex.LST"/>
+<package size="21667"/>
+<disk free="131696640"/>
+/>
+<package name="base\devloadx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\devloadx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\devloadx.LST"/>
+<package size="3561"/>
+<disk free="131661824"/>
+/>
+<package name="base\displayx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\displayx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\displayx.LST"/>
+<package size="103699"/>
+<disk free="131651584"/>
+/>
+<package name="base\dosfsckx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\dosfsckx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\dosfsckx.LST"/>
+<package size="78182"/>
+<disk free="131534848"/>
+/>
+<package name="base\doslfnx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\doslfnx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\doslfnx.LST"/>
+<package size="263118"/>
+<disk free="131436544"/>
+/>
+<package name="base\dskcompx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\dskcompx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\dskcompx.LST"/>
+<package size="9548"/>
+<disk free="131115008"/>
+/>
+<package name="base\dskcopyx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\dskcopyx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\dskcopyx.LST"/>
+<package size="99753"/>
+<disk free="131092480"/>
+/>
+<package name="base\editx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\editx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\editx.LST"/>
+<package size="147736"/>
+<disk free="130973696"/>
+/>
+<package name="base\edlinx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\edlinx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\edlinx.LST"/>
+<package size="67521"/>
+<disk free="130811904"/>
+/>
+<package name="base\emm386x" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\emm386x.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\emm386x.LST"/>
+<package size="59036"/>
+<disk free="130721792"/>
+/>
+<package name="base\exe2binx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\exe2binx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\exe2binx.LST"/>
+<package size="30361"/>
+<disk free="130643968"/>
+/>
+<package name="base\fasthlpx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fasthlpx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fasthlpx.LST"/>
+<package size="30078"/>
+<disk free="130598912"/>
+/>
+<package name="base\fcx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fcx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fcx.LST"/>
+<package size="44415"/>
+<disk free="130523136"/>
+/>
+<package name="base\fdapmx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fdapmx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fdapmx.LST"/>
+<package size="21827"/>
+<disk free="130453504"/>
+/>
+<package name="base\fdiskx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fdiskx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fdiskx.LST"/>
+<package size="299612"/>
+<disk free="130418688"/>
+/>
+<package name="base\fdpkgx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fdpkgx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fdpkgx.LST"/>
+<package size="41810"/>
+<disk free="130091008"/>
+/>
+<package name="base\fdxmsx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fdxmsx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fdxmsx.LST"/>
+<package size="67407"/>
+<disk free="130033664"/>
+/>
+<package name="base\findx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\findx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\findx.LST"/>
+<package size="13239"/>
+<disk free="129949696"/>
+/>
+<package name="base\formatx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\formatx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\formatx.LST"/>
+<package size="75623"/>
+<disk free="129904640"/>
+/>
+<package name="base\fshieldx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\fshieldx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\fshieldx.LST"/>
+<package size="54646"/>
+<disk free="129814528"/>
+/>
+<package name="base\fxms286x" choice="n" />
+<package name="base\gplv2" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\gplv2.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\gplv2.LST"/>
+<package size="44797"/>
+<disk free="129751040"/>
+/>
+<package name="base\graphicx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\graphicx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\graphicx.LST"/>
+<package size="60066"/>
+<disk free="129703936"/>
+/>
+<package name="base\helpx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\helpx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\helpx.LST"/>
+<package size="262334"/>
+<disk free="129624064"/>
+/>
+<package name="base\infozipx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\infozipx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\infozipx.LST"/>
+<package size="235024"/>
+<disk free="129314816"/>
+/>
+<package name="base\keybx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\keybx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\keybx.LST"/>
+<package size="357932"/>
+<disk free="129054720"/>
+/>
+<package name="base\labelx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\labelx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\labelx.LST"/>
+<package size="7085"/>
+<disk free="128661504"/>
+/>
+<package name="base\lbacachx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\lbacachx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\lbacachx.LST"/>
+<package size="99669"/>
+<disk free="128638976"/>
+/>
+<package name="base\memx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\memx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\memx.LST"/>
+<package size="53781"/>
+<disk free="128524288"/>
+/>
+<package name="base\mirrorx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\mirrorx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\mirrorx.LST"/>
+<package size="26451"/>
+<disk free="128452608"/>
+/>
+<package name="base\modex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\modex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\modex.LST"/>
+<package size="47012"/>
+<disk free="128403456"/>
+/>
+<package name="base\morex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\morex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\morex.LST"/>
+<package size="18026"/>
+<disk free="128346112"/>
+/>
+<package name="base\movex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\movex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\movex.LST"/>
+<package size="53753"/>
+<disk free="128294912"/>
+/>
+<package name="base\nansix" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\nansix.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\nansix.LST"/>
+<package size="35667"/>
+<disk free="128223232"/>
+/>
+<package name="base\nlsfuncx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\nlsfuncx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\nlsfuncx.LST"/>
+<package size="4206"/>
+<disk free="128176128"/>
+/>
+<package name="base\printqx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\printqx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\printqx.LST"/>
+<package size="6934"/>
+<disk free="128163840"/>
+/>
+<package name="base\printx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\printx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\printx.LST"/>
+<package size="4121"/>
+<disk free="128151552"/>
+/>
+<package name="base\recoverx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\recoverx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\recoverx.LST"/>
+<package size="28388"/>
+<disk free="128135168"/>
+/>
+<package name="base\replacex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\replacex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\replacex.LST"/>
+<package size="29256"/>
+<disk free="128098304"/>
+/>
+<package name="base\ripcordx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\ripcordx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\ripcordx.LST"/>
+<package size="10252"/>
+<disk free="128055296"/>
+/>
+<package name="base\samcfg" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\samcfg.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\samcfg.LST"/>
+<package size="47780"/>
+<disk free="128040960"/>
+/>
+<package name="base\sharex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\sharex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\sharex.LST"/>
+<package size="7364"/>
+<disk free="127979520"/>
+/>
+<package name="base\shsucdxx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\shsucdxx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\shsucdxx.LST"/>
+<package size="152897"/>
+<disk free="127956992"/>
+/>
+<package name="base\shsudrvx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\shsudrvx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\shsudrvx.LST"/>
+<package size="46459"/>
+<disk free="127768576"/>
+/>
+<package name="base\sortx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\sortx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\sortx.LST"/>
+<package size="14934"/>
+<disk free="127709184"/>
+/>
+<package name="base\substx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\substx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\substx.LST"/>
+<package size="195770"/>
+<disk free="127668224"/>
+/>
+<package name="base\sysx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\sysx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\sysx.LST"/>
+<package size="420946"/>
+<disk free="127430656"/>
+/>
+<package name="base\treex" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\treex.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\treex.LST"/>
+<package size="30436"/>
+<disk free="126969856"/>
+/>
+<package name="base\undelx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\undelx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\undelx.LST"/>
+<package size="86934"/>
+<disk free="126920704"/>
+/>
+<package name="base\unfmtx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\unfmtx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\unfmtx.LST"/>
+<package size="28514"/>
+<disk free="126818304"/>
+/>
+<package name="base\unstablx" choice="n" />
+<package name="base\xcdromx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\xcdromx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\xcdromx.LST"/>
+<package size="16378"/>
+<disk free="126771200"/>
+/>
+<package name="base\xcopyx" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\xcopyx.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\xcopyx.LST"/>
+<package size="58353"/>
+<disk free="126744576"/>
+/>
+<package name="base\xdmax" choice="y" 
+< full zipfile="X:\FREEDOS\PACKAGES\base\xdmax.ZIP"/>
+< full ziplist="C:\FDOS\PACKAGES\xdmax.LST"/>
+<package size="16848"/>
+<disk free="126672896"/>
+/>
+</disk>
+<datfile name="X:\FREEDOS\PACKAGES\base.2" >
+<datfile name no exist="X:\FREEDOS\PACKAGES\base.2" >
+</diskset>
+
+</install>

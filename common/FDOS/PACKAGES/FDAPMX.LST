@@ -1,0 +1,10 @@
+appinfo/
+appinfo/fdapm.lsm
+bin/
+bin/fdapm.com
+doc/
+doc/fdapm/
+doc/fdapm/apmnotes.txt
+doc/fdapm/fdapm.txt
+packages/
+packages/fdapmx/

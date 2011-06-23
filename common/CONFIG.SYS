@@ -1,0 +1,11 @@
+!files=50
+!break=on
+!stacks=0,0
+
+lastdrive=Z
+buffers=20,0
+DOS=HIGH,UMB
+VERSION=6.20
+
+DEVICE=\fdos\bin\FDXXMS.SYS BIOS NUMHANDLES=64
+!SHELL=\command.com \fdos\bin /e:512 /p=autoexec.bat

@@ -1,0 +1,14 @@
+appinfo/
+appinfo/assign.lsm
+bin/
+bin/assign.com
+doc/
+doc/assign/
+doc/assign/bugs
+doc/assign/history
+doc/assign/notes
+help/
+help/assign.en
+nls/
+packages/
+packages/assignx/

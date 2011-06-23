@@ -1,0 +1,9 @@
+appinfo/
+appinfo/xdma.lsm
+bin/
+bin/xdma.sys
+doc/
+doc/xdma/
+doc/xdma/readme.txt
+packages/
+packages/xdmax/

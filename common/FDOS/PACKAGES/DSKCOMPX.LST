@@ -1,0 +1,12 @@
+appinfo/
+appinfo/diskcomp.lsm
+bin/
+bin/diskcomp.com
+doc/
+doc/diskcomp/
+doc/diskcomp/readme.txt
+help/
+help/diskcomp.en
+nls/
+packages/
+packages/dskcompx/

@@ -1,0 +1,11 @@
+bin/
+bin/cpulevel.com
+bin/fart.exe
+bin/finddisk.com
+bin/findfdcd.bat
+bin/pcisleep.com
+bin/whichfat.com
+bin/xmssize.com
+localize.txt
+postinst.bat
+postset.bat

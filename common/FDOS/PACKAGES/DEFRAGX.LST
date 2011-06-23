@@ -1,0 +1,9 @@
+appinfo/
+appinfo/defrag.lsm
+bin/
+bin/defrag.exe
+bin/defrag.hlp
+help/
+help/defrag.en
+packages/
+packages/defragx/

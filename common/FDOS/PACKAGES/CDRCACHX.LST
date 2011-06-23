@@ -1,0 +1,12 @@
+appinfo/
+appinfo/cdrcache.lsm
+bin/
+bin/cdrcache.sys
+doc/
+doc/cdrcache/
+doc/cdrcache/cdrcache.txt
+doc/cdrcache/history.txt
+packages/
+packages/cdrcachx/
+packages/cdrcachx/remove.bat
+packages/cdrcachx/upgrade.bat

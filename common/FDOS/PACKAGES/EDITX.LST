@@ -1,0 +1,16 @@
+appinfo/
+appinfo/edit.lsm
+bin/
+bin/edit.cfg
+bin/edit.exe
+bin/edit.hlp
+doc/
+doc/edit/
+doc/edit/bugs.txt
+doc/edit/contrib.txt
+doc/edit/copying
+doc/edit/readme
+nls/
+nls/edit.ru
+packages/
+packages/editx/

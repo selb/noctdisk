@@ -1,0 +1,13 @@
+MEM Bugs
+========
+
+Known Bugs
+----------
+
+See http://wiki.fdos.org/Main/Mem
+
+Bug Reports
+-----------
+
+Please report any bugs to the FreeDOS bug system at
+http://www.freedos.org/freedos/bugs

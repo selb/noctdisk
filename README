@@ -1,0 +1,4 @@
+Edit file paths in the Makefile and type 'make' to create a NoctdiskII.zip.
+
+Everything is under the license it's under. Since this is just an amalgamation
+of existing programs, I claim no copyright on the small amount of glue.

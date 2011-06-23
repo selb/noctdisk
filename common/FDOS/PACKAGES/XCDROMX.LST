@@ -1,0 +1,9 @@
+appinfo/
+appinfo/xcdrom.lsm
+bin/
+bin/xcdrom.sys
+doc/
+doc/xcdrom/
+doc/xcdrom/readme.txt
+packages/
+packages/xcdromx/

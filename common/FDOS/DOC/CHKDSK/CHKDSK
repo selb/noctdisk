@@ -1,0 +1,204 @@
+                                === chkdsk ===
+   
+Version
+-------
+
+This is the documentation for chkdsk version 0.31. This version is a candidate
+for version 1 and includes most of the planned features like:
+
+- Can scan all DOS volumes that contain FAT12 or FAT16 of which the bytes per 
+  sector is 512.
+- Can scan image files of FAT12 or FAT16 volumes.
+- Can fix all found errors, except those in the BOOT.
+- Can work with long file names. It can scan them on errors and fix them.
+- Can show all files in the volume together with there fragmentation factor.
+- Can scan the data area for bad sectors and try to relocate clusters
+  that contain bad sectors.
+- Can show the files as they are being checked. 
+- Can be instructed to show only a drive summary.
+- Contains an internal sophisticated XMS cache for maximal scanning speed.
+
+New in this version
+-------------------
+
+Fixes by Matija Nalis for FreeDOS bugs:
+
+1632: chkdsk gives "error accessing volume"
+1633: chkdsk reports "invalid size" with monster numbers
+
+Authors
+-------
+
+Imre Leber (imre.leber@worldonline.be)
+
+License
+-------
+
+Chkdsk is released under the terms of the GNU General Public License 
+(see copying for details). 
+
+Many thanx to
+-------------
+
+Gregg Jennings for writing the disklib, which can be found at:
+
+   http://www.diskwarez.com
+
+Tom Ehlert for speed increases, ideas and critisism.
+
+
+Matija Nalis for fixing bugs:
+
+1632: chkdsk gives "error accessing volume"
+1633: chkdsk reports "invalid size" with monster numbers
+
+Purpose
+-------
+
+Chkdsk is a free implementation of the MS-DOS utility with the same name. 
+It scans for the most common disk errors and it can fix them.
+
+It also shows a summary of the drive. And allows to scan the data area for 
+bad sectors.
+
+Syntax and usage
+----------------
+
+The syntax for chkdsk is as follows:
+
+Usage:
+        Chkdsk [<volume>] [/f] [/d <files>] [/r] [/s] [/v]
+
+/f: attempt to fix any errors found.
+/d: print out the indicated files and show the fragmentation factor.
+/r: scan the data area and try to recover unreadable data.
+/s: only show drive summary.
+/v: show file name as it is being checked.
+
+Note: if volume is ommited, the current drive is assumed.
+
+The character for the options (the '/') actually depends on the DOS switch
+character. If you have changed it to an other character than '/', you can
+use that character instead (but this is not required).
+
+Scanning and fixing errors
+--------------------------
+
+To simply scan for errors you can use the following command:
+
+   chkdsk <volume>
+
+eg.
+
+   chkdsk a:
+
+To fix all the errors found, you can enter the command:
+
+   chkdsk <volume> /f
+
+eg. 
+   
+   chkdsk a: /f
+
+To show all the files on the volume as they are being scanned, you can add 
+the /v option,
+
+like:
+
+   chkdsk a: /f /v
+
+Using image files
+-----------------
+
+You can scan image files, just like you can scan a normal drive. For this you 
+just enter a filename in the place of the volume. 
+
+For example:
+
+   chkdsk example.img /f /v
+
+This will scan the image file for errors, try to fix the errors that are found
+and report all the files in the image file as they are being scanned.
+
+
+Showing the fragmentation factor
+--------------------------------
+
+Using the /d option you can instruct chkdsk to show certain files on the 
+volume with there fragmentation factor.
+
+Syntax:
+
+   chkdsk [<volume>] [/d <wildcard>]
+
+For example:
+
+   chkdsk a: /d *.*
+
+or 
+
+   chkdsk /d *.*
+
+or 
+
+   chkdsk example.img /d *.*
+
+
+This should give you a listing like:
+
+c:> chkdsk defrag.img /d source\*.*
+
+ChkDsk beta 0.31
+Copyright 2002, 2003 Imre Leber under the GNU GPL
+
+source\*.*
+
+BUILD     BAT A----  (0%)
+CLEAN     BAT A----  (0%)
+CMDEFINT      ----D  (0%)
+CVS           ----D  (0%)
+ENGINE        ----D  (0%)
+ENVIRON       ----D  (0%)
+INIFILE       ----D  (0%)
+MEMMAN        ----D  (0%)
+MISC          ----D  (50%)
+MODLGATE      ----D  (0%)
+MODULES       ----D  (0%)
+MSDEFINT      ----D  (50%)
+README        A----  (0%)
+STREE     DOC A----  (0%)
+
+The first collumn shows the file name,
+the second collumn the extension.
+the third collumn the file attribute and
+the fourth collumn the fragmentation factor.
+
+Only showing the drive summary.
+-------------------------------
+
+If you do not want to wait on a full disk scan, but just want to scan a drive
+you can use the /s option.
+
+Example:
+
+   chkdsk example.img /s 
+
+Scanning the data area.
+-----------------------
+
+You can scan the data area of a drive for sectors which may have become bad. 
+
+For this you use the /r option, like:
+
+   chkdsk a: /r
+
+This will scan the data area of the volume in drive a: and try to recover as 
+much data as possible in case some sectors may have become damaged.
+
+Planned features.
+-----------------
+
+More fixes and the ability to choose which fix you want to apply to a certain 
+file.
+
+Support FAT32.

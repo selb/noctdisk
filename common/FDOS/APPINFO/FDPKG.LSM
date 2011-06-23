@@ -1,0 +1,12 @@
+Begin3
+Title:          FreeDOS Package Manager
+Version:        1.0 pre
+Entered-date:   07-06-2006
+Description:    Manages installing removing and updating of FreeDOS
+                packages in zip or 7zip format
+Keywords:       freedos, packages, zip, 7z, 7zip, install, update, remove
+Author:         Blair Campbell
+Maintained-by:  Blair Campbell
+Platforms:      DOS
+Copying-policy: GPL
+End

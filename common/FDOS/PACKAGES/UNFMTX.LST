@@ -1,0 +1,16 @@
+appinfo/
+appinfo/unformat.lsm
+bin/
+bin/unformat.exe
+doc/
+doc/unformat/
+doc/unformat/bugs.txt
+doc/unformat/help.txt
+doc/unformat/license.txt
+doc/unformat/news.txt
+doc/unformat/readme.txt
+help/
+help/unformat.en
+nls/
+packages/
+packages/unfmtx/

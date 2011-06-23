@@ -1,0 +1,12 @@
+appinfo/
+appinfo/fdpkg.lsm
+bin/
+bin/fdpkg.exe
+bin/lfn2sfn.exe
+bin/sfn2lfn.exe
+nls/
+nls/fdpkg.en
+packages/
+packages/fdpkgx/
+packages/fdpkgx/depends.txt
+bin/mset.com

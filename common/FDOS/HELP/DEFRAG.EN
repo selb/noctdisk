@@ -1,0 +1,24 @@
+FreeDOS defrag beta 0.3
+Optimizes file loading times by moving file fragments together.
+
+(C) 2000, 2002, 2003 by Imre Leber under the GNU General Public License.
+
+defrag [/C] [<drive>:] [{/F|/U}] [/Sorder[-]] [/B] [/X] [/A] [/FO]
+
+drive : drive letter of drive to optimize.
+
+/C : Use command line version only.
+/F : Fully optimizes specified drive.
+/U : Unfragments files, possibly leaving space between files.
+/S : Sort files by specified order.
+      order: N  by Name (alphabetic)            E by Extension (alphabetic)
+             D  by Date & time (earliest first) S by Size (smallest first)
+      - suffix to sort in descending order.
+/B : Restarts computer after optimization.
+/X : Always automatically exits.
+/A : Audible warning before user action.
+/FO: Full textual output (only relevant when used with /C option).
+
+Remarks:
+    Type defrag /no-ops for a list of no-ops.
+    Type defrag /contrib for a list of contributors.

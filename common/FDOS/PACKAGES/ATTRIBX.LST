@@ -1,0 +1,13 @@
+appinfo/
+appinfo/attrib.lsm
+bin/
+bin/attrib.com
+doc/
+doc/attrib/
+doc/attrib/files.lst
+doc/attrib/history.txt
+doc/attrib/plans.txt
+help/
+help/attrib.en
+packages/
+packages/attribx/

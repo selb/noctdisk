@@ -1,0 +1,215 @@
+
+				  SHSUCD Suite
+
+			   Copyright Jason Hood 2004
+
+			     Freeware. Version 3.00
+
+		     Derived from SHSUCD 1.4b by John McCoy
+
+
+    ===========
+    Description
+    ===========
+
+    The SHSUCD suite is a set of programs  dealing  with  the  CD-ROM.	They
+    allow  access  to  the  CD-ROM as a normal drive letter; create an image
+    file from the contents of a CD-ROM; access an image file as a drive; and
+    test certain CD-ROM functions.
+
+
+    ========
+    Programs
+    ========
+
+    The following programs are included in the suite:
+
+	SHSUCDX  v3.00	Provides access to the CD-ROM as a drive (MSCDEX)
+	SHSUCDHD v3.00	Simulates a CD-ROM using an image file
+	CD2ISO	 v1.01	Creates an image from a CD-ROM
+	CDTEST		Tests the CD-ROM functions (Int2F/AH=15)
+	SMARTER 	Patches SMARTDrive 5.02 to cache SHSUCDX
+
+
+    =======
+    SHSUCDX
+    =======
+
+    SHSUCDX is a CD-ROM redirector substitute for MSCDEX.  It  differs	from
+    MSCDEX  in	that  it  can  be unloaded, it occupies less memory and only
+    selected drives are mapped. It can also handle lowercase names and	long
+    names (where the 8.3 name would be duplicated). Please see SHSUCDX.TXT.
+
+
+    ========
+    SHSUCDHD
+    ========
+
+    SHSUCDHD is a pseudo CD-ROM driver that emulates CD-ROMs by using  image
+    files.  The  image	file can be created by CD2ISO (see below), or by any
+    program that can generate a standard .ISO file. Please see SHSUCDHD.TXT.
+
+
+    ======
+    CD2ISO
+    ======
+
+    CD2ISO will create an image file from a CD-ROM (or DVD-ROM, provided  it
+    is	smaller than 2Gb). The image is a direct copy of the contents of the
+    CD, which can then be used by SHSUCDHD and SHSUCDX	to  access  the  CD,
+    without  needing  the  physical  disc.  Only  the  files are accessible,
+    though, not any of the audio. The time-stamp of the file is set  to  the
+    modification time of the CD.
+
+    -----
+    Usage
+    -----
+
+    At it's simplest, just run it (of course, you'll need a CD in the drive,
+    SHSUCDX  or  MSCDEX  installed  and  enough  free disk space to hold the
+    image).  An image of the entire CD will be	created,  using  the  volume
+    label as the file name, with an extension of .ISO. If you have more than
+    one drive, specify its letter (with or without a colon)  to  select  it.
+    Likewise,  to  choose the file name, just specify it.  If you don't want
+    to copy the entire CD, or if what is copied is not actually  everything,
+    specify the number of sectors.  These three options can be in any order,
+    but there is one caveat: the file name can not be  a  single  letter  or
+    entirely digits.
+
+    Since CDs are typically quite large, progress is displayed	(as  a	per-
+    centage,  bar  graph and sector count), with an estimated time remaining
+    (updated every five seconds). The imaging can be paused by pressing  any
+    key, which then gives an option to abort or continue. It will also pause
+    if there is a read error from the CD or a write error to the  disk.   If
+    you  choose  to  abort,  the  image is not deleted and it is possible to
+    resume the imaging (from just before the abortion point).
+
+    ---------
+    Exit Code
+    ---------
+
+	0	Image created, or help displayed
+	1	Not enough memory
+	2	Problem with CD (SHSUCDX not installed, drive is not a
+		  CD-ROM, unrecognised format, no disc present)
+	3	Image file already exists (user chose not to overwrite or
+		  resume)
+	4	Image could not be created (DVD-ROM too large, not enough
+		  free disk space, could not create file)
+	5	User aborted (with possible read/write error)
+
+
+    ======
+    CDTEST
+    ======
+
+    CDTEST is a simple program to test the CD-ROM functions on interrupt 2F,
+    AH=15. It also tests the installation checks using AX=1100. It will only
+    work with SHSUCDX (and only this version,  not  earlier  versions).  All
+    functions  00  to  0F are tested (ie. it includes unsupported functions,
+    but excludes 10 device request). To test 0F directory entry,  specify  a
+    file name (which must be a complete path, including drive letter). Since
+    different CDs will yield different results, the output of each  function
+    is	displayed, rather than a "pass/fail" message, so manual verification
+    is necessary.
+
+
+    =======
+    SMARTER
+    =======
+
+    SMARTER will patch SMARTDrive 5.02 to enable it to cache SHSUCDX. If  no
+    file  name is specified, it will try SMARTDRV.EXE in the directory given
+    in the "winbootdir" environment variable, or C:\WINDOWS if that  doesn't
+    exist.   If the patch is successful, SMARTCDX.EXE will be created in the
+    current directory.	Note that SMARTCDX is not capable of caching MSCDEX.
+    It	is  recommended  the  SMARTDRV line in CONFIG.SYS or AUTOEXEC.BAT is
+    duplicated and commented, modifying the copy to point to SMARTCDX. Note:
+    users of earlier versions of SHSUCDX will need to run SMARTER again.
+
+    ---------
+    Exit Code
+    ---------
+
+	0	SMARTCDX.EXE created OK, or help displayed
+	1	Could not open SMARTDRV.EXE or specified file
+	2	Not enough memory
+	3	Unrecognised SMARTDrive version
+	4	Could not create SMARTCDX.EXE
+	5	Could not write SMARTCDX.EXE
+
+
+    =========
+    Compiling
+    =========
+
+    I have used NASM 0.98.38, ALINK 1.6 and Borland C++ 3.1. Typical command
+    lines are:
+
+	SHSUCDX.COM:	nasm -O2 shsucdx.nsm -o shsucdx.com
+	SHCDX86.COM:	nasm -O2 -Di8086 shsucdx.nsm -o shcdx86.com
+	SHSUCDHD.EXE:	nasm -O2 shsucdhd.nsm -f obj
+			alink shsucdhd
+	SHCDHD86.EXE:	nasm -O2 -Di8086 shsucdhd.nsm -f obj -o shcdhd86.obj
+			alink shcdhd86
+	CD2ISO.EXE:	bcc cd2iso.c
+	CD2ISO86.EXE:	bcc -1- -ecd2iso86.exe cd2iso.c
+	CDTEST.EXE:	bcc -1- cdtest.c
+	SMARTER.EXE:	bcc -1- smarter.c
+
+    Note: my TURBOC.CFG file contains: -3 -O2 -w -d -f- -k-
+
+    Users of other C compilers should be able to compile SMARTER.C, but  the
+    other two C programs may need modifications (I've used REGPACK and intr,
+    which seems Borland-specific, so you'll have to split REGPACK into  REGS
+    and SREGS and use int86x).
+
+    There's no need to tell me about UPX, but feel free to use it yourself.
+
+
+    =====
+    Files
+    =====
+
+    The following files are included in the package:
+
+	README.TXT	This file
+	UPDATE.TXT	List of changes
+	TODO.TXT	List of possible remaining changes
+	SHSUCDX.COM	MSCDEX replacement (386+)
+	SHCDX86.COM	8086 version of above
+	SHSUCDX.TXT	Documentation for SHSUCDX
+	SHSUCDHD.EXE	Use an image file as a CD (386+)
+	SHCDHD86.EXE	8086 version of above
+	SHSUCDHD.TXT	Documentation for SHSUCDHD
+	CD2ISO.EXE	Create an image file from a CD (386+)
+	CD2ISO86.EXE	8086 version of above
+	CDTEST.EXE	Test the CD functions (Int2F/AH=15)
+	SMARTER.EXE	Patch to allow SMARTDrive 5.02 to cache SHSUCDX
+	SHSUCDX.NSM	NASM source code for SHSUCDX
+	NASM.MAC	General purpose NASM macros
+	UNDOC.MAC	Undocumented DOS and internal structures
+	CDROM.MAC	CD-ROM structures
+	SHSUCDHD.NSM	NASM source code for SHSUCDHD
+	CD2ISO.C	(Borland) C source code for CD2ISO
+	CDTEST.C	(Borland) C source code for CDTEST
+	SMARTER.C	(Borland) C source code for SMARTER
+
+
+    =======
+    Contact
+    =======
+
+    mailto:jadoxa@yahoo.com.au
+    mailto:shsucd@yahoogroups.com
+    http://shsucdx.adoxa.cjb.net/
+
+    Jason Hood
+    11 Buckle Street
+    North Rockhampton
+    Qld 4701
+    Australia
+
+
+    ==============================
+    Jason Hood, 29 November, 2004.

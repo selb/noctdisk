@@ -1,0 +1,13 @@
+appinfo/
+appinfo/debug.lsm
+bin/
+bin/debug.com
+bin/debug98.com
+doc/
+doc/debug/
+doc/debug/debug.doc
+doc/debug/readme
+help/
+help/debug.en
+packages/
+packages/debugx/

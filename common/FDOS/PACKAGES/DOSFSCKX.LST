@@ -1,0 +1,15 @@
+appinfo/
+appinfo/dosfsck.lsm
+bin/
+bin/dosfsck.exe
+doc/
+doc/dosfsck/
+doc/dosfsck/changes
+doc/dosfsck/dosfsck.8
+doc/dosfsck/help.txt
+doc/dosfsck/readme.ata
+doc/dosfsck/readme.v1
+doc/dosfsck/todo
+packages/
+packages/dosfsckx/
+packages/dosfsckx/depends.txt

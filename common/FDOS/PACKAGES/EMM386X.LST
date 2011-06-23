@@ -1,0 +1,16 @@
+appinfo/
+appinfo/emm386.lsm
+bin/
+bin/emm386.exe
+bin/himem.exe
+doc/
+doc/emm386/
+doc/emm386/build.txt
+doc/emm386/errata.txt
+doc/emm386/history.txt
+doc/emm386/license.txt
+help/
+help/emm386.en
+help/himem.en
+packages/
+packages/emm386x/

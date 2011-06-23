@@ -1,0 +1,83 @@
+2 August, 2004: started conversion to NASM;
+		report version as 2.30.
+9 August, 2004: get attributes (redir 0f) returns size, time & date.
+10 August, 2004: modified finding volume label (consistent with MSCDEX):
+		   the attribute must equal 8 (NOT bit 3 set)
+		   the label is always returned first (dir/pattern is ignored)
+		   the search then continues as normal
+12 August, 2004: fixed tilde usage not being set properly; allow AX != 0.
+?? August, 2004: added /L:<letter>.
+22 September, 2004: really fixed tilde usage (can't use AX, idiot!).
+25 September, 2004: don't know what the hell I was thinking with that tilde
+		     usage, I should read my own docs (the above used CH to
+		     both set and get, now I've reverted back to BX for state);
+		    released first 3.00 beta.
+
+29 September, 2004: fixed bug in option processing (failed multiple /D).
+5 October, 2004: fixed bug with /C and LH with three or more drives.
+7 October, 2004: fixed bug displaying wrong device name if unable to open;
+		 added /Q[Q] option, for quiet operation;
+		 refuse non-CD drivers;
+		 added /V option to display memory usage.
+8 October, 2004: added /D:Drives option to reserve/remove drives;
+		 added /R option to determine read-only attribute;
+		 due to above, made read-only the default.
+11 October, 2004: added get/set read-only attribute to the API.
+
+12 October, 2004: Released beta 2 (including all programs).
+
+14 October, 2004: fixed bug with tildes (NASM optimisation ruined inline data);
+		  added Joliet code.
+18 October, 2004: fixed bug in locating files (FindEntry was using SHL not SHR);
+		  couple more size optimisations (code rearranging).
+9 November, 2004: remove trailing slash when changing directory.
+11 November, 2004: added DRDOS define to work around the INSTALL problem.
+12 November, 2004: fixed problem with Int2F/AX=11FF;
+		   use normal "D:\" instead of "\\D.\A.\" (define CDROOT).
+13 November, 2004: allow one level of nesting (define CDIMAGE); this lets an
+		    image be on a CD.
+15 November, 2004: fixed problem retrying critical error (preserve ES);
+		   fixed redirector chaining problem (couldn't run programs on
+		    a network drive; problem was with RD_Read PUSHing CX,
+		    upsetting the return address discards).
+16 November, 2004: fixed uninstall (ClrRoot wasn't called correctly);
+		   install if drives were reserved, but no devices were found;
+		   recognise number of drives being zero.
+17 November, 2004: display number of drives available;
+		   prefix driver name with '*' to ignore and reserve;
+		   removed VARBLKSIZE and associated file test.
+19 November, 2004: removed VLabel from DrvEnt, use FName within RootEnt;
+		   SMARTDrive check returns size of DrvEnt in DX;
+		   modifed SMARTER to suit both of above (rerun!).
+23 November, 2004: fixed bug with RedirForUsFlag (40h might not be set; close
+		    would fail sometimes);
+		   DRDOS define no longer needed (dynamically relocate code).
+26 November, 2004: fail my invalid API calls (for future compatibility).
+27 November, 2004: [/?] /V displays compile- and run-time options;
+		   changed default driver to SHSU-CDH.
+28 November, 2004: modified SMARTDrive check (BX enters with 0BABEh and
+		    returns with compile-time flags).
+29 November, 2004: verify resident and executable compilations match.
+
+
+SHSUCDHD:
+10 October, 2004: added /V option to display memory usage.
+
+24 October, 2004: fixed Link when using i8086 (mmovd corrupting DX).
+25 October, 2004: fixed restore bug with i8086 savea;
+		  fixed bug in calculating i8086 file position;
+		  fixed bug with unknown unit/cmd error (using B1, not B9);
+		  stopped help message saying it was installed.
+15 November, 2004: refuse to install if bad image; prefix name with '?' to
+		    install anyway (if at least one good image).
+24 November, 2004: only use truename for display (work around CD and Phantom
+		    root paths);
+		   preserve flags on interrupt entry;
+		   allow INSTALL on DR-DOS;
+		   primitive audio (track) support (IOCtlIn fns 10, 11 & 15).
+
+
+CD2ISO:
+25 October, 2004: abort if image would be greater than 2GB;
+		  --help option;
+		  option to set number of sectors.

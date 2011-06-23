@@ -1,0 +1,12 @@
+appinfo/
+appinfo/label.lsm
+bin/
+bin/label.exe
+doc/
+doc/label/
+doc/label/history.txt
+help/
+help/label.en
+nls/
+packages/
+packages/labelx/

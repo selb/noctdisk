@@ -1,0 +1,7 @@
+appinfo/
+appinfo/recover.lsm
+bin/
+bin/recover.exe
+doc/
+packages/
+packages/recoverx/

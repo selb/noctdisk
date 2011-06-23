@@ -1,0 +1,11 @@
+bin/
+bin/cwsdpmi.exe
+doc/
+doc/cwsdpmi/
+doc/cwsdpmi/cwsdpmi.doc
+doc/cwsdpmi/cwsparam.doc
+doc/cwsdpmi/README.UPD
+packages/
+packages/cwsdpmix/
+packages/cwsdpmix/remove.bat
+packages/cwsdpmix/upgrade.bat

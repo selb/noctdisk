@@ -1,0 +1,11 @@
+appinfo/
+appinfo/mode.lsm
+bin/
+bin/mode.com
+doc/
+doc/mode/
+doc/mode/mode.txt
+help/
+help/mode.en
+packages/
+packages/modex/

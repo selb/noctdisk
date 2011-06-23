@@ -1,0 +1,8 @@
+appinfo/
+appinfo/nlsfunc.lsm
+bin/
+bin/nlsfunc.exe
+help/
+help/nlsfunc.en
+packages/
+packages/nlsfuncx/

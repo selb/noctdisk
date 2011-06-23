@@ -1,0 +1,10 @@
+appinfo/
+appinfo/bootfix.lsm
+bin/
+bin/bootfix.com
+doc/
+doc/bootfix/
+doc/bootfix/plans.txt
+doc/bootfix/readme.txt
+packages/
+packages/bootfixx/

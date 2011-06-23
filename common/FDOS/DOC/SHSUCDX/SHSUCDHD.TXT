@@ -1,0 +1,99 @@
+
+				    SHSUCDHD
+
+			   Copyright 2004 Jason Hood
+
+			     Freeware. Version 3.00
+
+			Derived from v2.0 by John McCoy
+
+
+    ===========
+    Description
+    ===========
+
+    SHSUCDHD is a pseudo CD-ROM driver that emulates CD-ROMs by using  image
+    files.  The  image	file is a standard .ISO file, which can be generated
+    by CD2ISO (which should be included in this package; see README.TXT).
+
+
+    =====
+    Usage
+    =====
+
+    Run SHSUCDHD with the name of one or more image files. If the images are
+    acceptable, a device driver called SHSU-CDH will be installed, with each
+    image being assigned as a unit on that device. SHSUCDX (or	MSCDEX)  can
+    then be used to access the images as normal drive letters.
+
+    -------
+    Options
+    -------
+
+	/F	specify image file name
+	/V	display memory usage
+	/U	unload
+	/Q	quiet
+
+
+    /F - File name
+
+    This "option" is required. It's complete syntax is:
+
+	/F:[?]filename
+
+    where FILENAME is the .ISO file. The question mark indicates this  image
+    should be ignored if it's invalid (rather than refusing to install). The
+    image is tested for validity by reading a part of it to see if it  looks
+    like a normal CD. It also checks if the file size and volume size agree,
+    although only a warning is displayed if not ('?'  is  not  necessary  to
+    continue  installation). Note the file is left open, so it should not be
+    moved whilst SHSUCDHD is active.
+
+    /V - Memory usage
+
+    When this option is used at install (it's ignored otherwise), a summary
+    of the memory usage is given. The summary includes:
+
+	Static		code and variables
+	Dynamic 	data for each image, plus paragraph rounding
+	SDA		swappable data area (to use DOS within DOS)
+	Total		overall memory usage
+
+    /U - Unload
+
+    Removes SHSUCDHD from the device driver  chain,  closes  the  files  and
+    frees  its	memory.  It  is possible to load SHSUCDHD multiple times, in
+    which case only the latest will be removed.
+
+    /Q - Quiet
+
+    Use this option to prevent the display of the sign-on  banner.  If	used
+    twice (ie. /QQ), no display will be output at all.
+
+
+    =====
+    Notes
+    =====
+
+    Any number of images are accepted, but only the first  10  unit  numbers
+    will be displayed correctly.
+
+    It will not work in Win9X (although Win3 is okay).	The old version will
+    work,  should you really need to do so (long names will be unavailable).
+    The old version is available from my site (see README.TXT). (Win9X users
+    should really be using a VXD, but I do not know if one is available.)
+
+    NT/2K/XP users can use FileDisk, see http://www.acc.umu.se/~bosse/ .
+
+
+    =========
+    Exit Code
+    =========
+
+	0	Installed, uninstalled, help
+	1	Not installed, not uninstalled
+
+
+    ==============================
+    Jason Hood, 29 November, 2004.

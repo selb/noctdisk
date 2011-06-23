@@ -1,0 +1,11 @@
+appinfo/
+appinfo/share.lsm
+bin/
+bin/share.com
+doc/
+doc/share/
+doc/share/share.hlp
+help/
+help/share.en
+packages/
+packages/sharex/
